@@ -130,11 +130,13 @@ RUN echo "$DEVELOPER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$DEVELOPER
 RUN chmod 0440 /etc/sudoers.d/$DEVELOPER
 ADD configs/user/bashrc /home/$DEVELOPER/.bashrc
 #RUN source ~/.bashrc
-RUN mkdir /home/$DEVELOPER/Proyectos
 
 # Change user for install dependencies
 USER $DEVELOPER
 WORKDIR /home/$DEVELOPER
+
+# Create projects folder
+RUN mkdir /home/$DEVELOPER/Proyectos
 
 # Install node
 RUN cd /home/$DEVELOPER
