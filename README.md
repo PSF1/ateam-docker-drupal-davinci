@@ -54,6 +54,18 @@
 
   $ sudo chmod +x /usr/local/bin/docker-compose
   ```
+## Configure host user
+- https://www.google.com/url?q=https://docs.docker.com/install/linux/linux-postinstall/&sa=D&source=hangouts&ust=1521290566728000&usg=AFQjCNEmovGeHrYF0TDhMnS2c424ZzF83A
+
+To create the docker group and add your user:
+
+Create the docker group.
+
+```$ sudo groupadd docker```
+
+Add your user to the docker group.
+
+```$ sudo usermod -aG docker $USER```
 
 ## Customomise docker-compose.yml
 - Set DRUPAL_PROJECT to your default project name
