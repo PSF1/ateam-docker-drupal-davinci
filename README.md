@@ -67,7 +67,7 @@ Add your user to the docker group.
 
 ```$ sudo usermod -aG docker $USER```
 
-Luego cerrar la sesión de usuario y volver a entrar.
+Then close your session and open it again.
 
 ## Customomise docker-compose.yml
 - Set DRUPAL_PROJECT to your default project name
